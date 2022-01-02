@@ -37,6 +37,12 @@ This portal should be able to :
     - **Database URL :** jdbc:h2:mem:testdb
     - **Username :** sa
     - **Password :** password
+    - Important Queries :
+    ~~~~
+    select * from cab;
+    select * from city;
+    select * from trip;
+    ~~~~
 4. Register Cities with below payload.
 5. Register Cabs with below payload.
 
