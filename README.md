@@ -14,9 +14,9 @@ This portal should be able to :
     - In case of clash above, randomly assign any cab Assumption : a cab once assigned a trip cannot cancel/reject it
 
 ## _Other Details_
-_Input:_ a snapshot of all cabs with their metadata and location
-`List of <Cab_Id, Cab_State, City_Id>`
-In case the Cab_State is ON_TRIP, the City_Id will be indeterminate
+- _Input:_ a snapshot of all cabs with their metadata and location.
+- `List of <Cab_Id, Cab_State, City_Id>`
+- In case the Cab_State is ON_TRIP, the City_Id will be indeterminate
 
 ## _Bonus_
 1. Provide insights such as for how much time was a cab idle in a given duration ?
@@ -31,11 +31,59 @@ In case the Cab_State is ON_TRIP, the City_Id will be indeterminate
 
 ## _Steps to Run Service_
 1. Just import in IDE & Run the service.
-2. To access application Swagger go to : http://localhost:8080/swagger-ui.html#/
+2. To access application Swagger : http://localhost:8080/swagger-ui.html#/
 3. To query database : http://localhost:8080/h2-console/
     - **Driver class name :** org.h2.Driver
     - **Database URL :** jdbc:h2:mem:testdb
     - **Username :** sa
     - **Password :** password
+4. Register Cities with below payload.
+5. Register Cabs with below payload.
 
 ## _Sample Data_
+#### Register Cities Payload ####
+~~~~
+[
+    {
+        "cityName": "Vadodara",
+        "xcoordinates": "1.784548",
+        "ycoordinates": "2.285451"
+    },
+    {
+        "cityName": "Surat",
+        "xcoordinates": "3.541551",
+        "ycoordinates": "4.845538"
+    },
+    {
+        "cityName": "Ahmedabad",
+        "xcoordinates": "6.551515",
+        "ycoordinates": "8.555151"
+    }
+]
+~~~~
+
+#### Register Cabs Payload ####
+~~~~
+[
+    {
+        "cabId": 745,
+        "cityId": 2,
+        "driverName": "Gaurang"
+    },
+    {
+        "cabId": 235,
+        "cityId": 1,
+        "driverName": "Smital"
+    },
+    {
+        "cabId": 551,
+        "cityId": 3,
+        "driverName": "Anjana"
+    },
+    {
+        "cabId": 587,
+        "cityId": 2,
+        "driverName": "Kesha"
+    }
+]
+~~~~
