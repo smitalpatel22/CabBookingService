@@ -29,3 +29,13 @@ In case the Cab_State is ON_TRIP, the City_Id will be indeterminate
 3. It should be properly designed.
 4. Don’t create any interactive UI.
 
+## _Steps to Run Service_
+1. Just import in IDE & Run the service.
+2. To access application Swagger go to : http://localhost:8080/swagger-ui.html#/
+3. To query database : http://localhost:8080/h2-console/
+    - **Driver class name :** org.h2.Driver
+    - **Database URL :** jdbc:h2:mem:testdb
+    - **Username :** sa
+    - **Password :** password
+
+## _Sample Data_
